@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Jobs</title></head>
+<body>
+  <h2>Available Jobs</h2>
+  <p><a th:href="@{/register}">Register</a> | <a th:href="@{/login}">Login</a> | <a th:href="@{/jobs/create}">Create Job</a></p>
+  <div th:if="${jobs.size() == 0}">No jobs available.</div>
+  <div th:each="job : ${jobs}">
+    <h3 th:text="${job.title} + ' @ ' + ${job.company}">Job title</h3>
+    <p th:text="${job.description}">Description</p>
+    <a th:href="@{|/apply/${job.id}|}">Apply</a>
+    <hr/>
+  </div>
+</body>
+</html>

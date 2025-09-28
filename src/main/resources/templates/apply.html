@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Apply</title></head>
+<body>
+  <h2 th:text="'Apply for: ' + ${job.title}">Apply for job</h2>
+  <div th:if="${error}" th:text="${error}" style="color:red"></div>
+  <form th:action="@{|/apply/${job.id}|}" method="post">
+    <label>Quick resume / cover note:<br/>
+      <textarea name="resumeText" rows="6" required></textarea>
+    </label><br/>
+    <button type="submit">Submit Application</button>
+  </form>
+  <p><a th:href="@{/jobs}">Back to jobs</a></p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Create Job</title></head>
+<body>
+  <h2>Create Job</h2>
+  <form th:action="@{/jobs/create}" method="post" th:object="${job}">
+    <label>Title: <input type="text" th:field="*{title}" required/></label><br/>
+    <label>Company: <input type="text" th:field="*{company}" required/></label><br/>
+    <label>Description: <textarea th:field="*{description}" rows="6"></textarea></label><br/>
+    <button type="submit">Create</button>
+  </form>
+  <p><a th:href="@{/jobs}">Back to jobs</a></p>
+</body>
+</html>
