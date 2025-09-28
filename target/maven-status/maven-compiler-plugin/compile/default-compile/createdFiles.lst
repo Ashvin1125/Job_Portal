@@ -1,0 +1,10 @@
+com\example\jobportal\controller\JobController.class
+com\example\jobportal\JobPortalApplication.class
+com\example\jobportal\model\JobApplication.class
+com\example\jobportal\model\Job.class
+com\example\jobportal\repository\JobApplicationRepository.class
+com\example\jobportal\controller\ApplicationController.class
+com\example\jobportal\repository\JobRepository.class
+com\example\jobportal\repository\UserRepository.class
+com\example\jobportal\model\User.class
+com\example\jobportal\controller\AuthController.class
